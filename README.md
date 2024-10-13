@@ -31,6 +31,17 @@ The program only supports default log format (version 2) and does not handle cus
 The matches for destination port and protocol combinations are case-insensitive.
 Any flow log records that do not match a tag in the lookup table will be classified as "Untagged."
 Flow log files can be up to 10 MB, and the lookup table can contain up to 10,000 mappings.
+Compilation:
+To compile the program, run the following command in the directory where FlowLogParser.java is located:
+javac FlowLogParser.java
+Running the Program
+Once compiled, you can run the program as follows:
+java FlowLogParser <flow_log_file> <lookup_table_file> <output_directory>
+. <flow_log_file>: Path to the input flow log file.
+. <lookup_table_file>: Path to the CSV file containing the lookup table.
+. <output_directory>: Directory where the output files will be generated.
+Example: java FlowLogParser flowlogs.txt lookup.csv output/
+
 
 
 
